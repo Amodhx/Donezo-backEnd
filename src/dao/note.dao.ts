@@ -55,9 +55,14 @@ class NoteDAO {
             const notes =  await NoteSchema.find({})
             if(notes.length > 0){
                 let lastNoteId = notes[notes.length - 1 ].note_id;
-                const number = +lastNoteId.split('-')[1];
-                const newNumber = number + 1;
-                return `NOTE-${newNumber}`;
+                if(lastNoteId){
+                    const number = +lastNoteId.split('-')[1];
+                    const newNumber = number + 1;
+                    return `NOTE-${newNumber}`;
+                }else{
+                    throw new Error("Cant generate Id");
+                }
+                
             }else{
                 return "NOTE-1";
             }

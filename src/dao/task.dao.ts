@@ -48,6 +48,25 @@ class TaskDAO{
             throw err;
         }
     }
+    async generateTaskId(){
+        try{
+            const tasks = await TaskSchema.find({});
+            if(tasks.length > 0){
+                let lastTaskId = tasks[tasks.length - 1].task_id;
+                if(lastTaskId){
+                    const number =  +lastTaskId.split('-')[1];
+                    const newNumber = number +1;
+                    return `TASK-${newNumber}`
+                }else{
+                    throw new Error("Cant generate Id");
+                }
+            }else{
+                return "TASK-1";
+            }
+        }catch(err){
+            throw err;
+        }
+    }
 }
 const TaskRepository = new TaskDAO();
 export default TaskRepository;

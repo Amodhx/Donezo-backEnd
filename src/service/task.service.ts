@@ -4,6 +4,7 @@ import TaskDTO from "../dto/task.dto";
 class TaskService{
     async saveTask(taskData:TaskDTO){
         try{
+            taskData.task_id = await TaskRepository.generateTaskId();
             return await TaskRepository.save(taskData);
         }catch(err){
             throw err;
