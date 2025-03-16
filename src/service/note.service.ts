@@ -5,6 +5,7 @@ class NoteService {
 
     async saveNote(noteData : NoteDTO){
         try{
+            noteData.note_id = await NoteRepository.generateNoteId();
             return await NoteRepository.save(noteData);
         }catch(err){
             throw err;

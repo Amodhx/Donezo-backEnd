@@ -50,6 +50,22 @@ class NoteDAO {
             throw err;
         }
     }
+    async generateNoteId(){
+        try{
+            const notes =  await NoteSchema.find({})
+            if(notes.length > 0){
+                let lastNoteId = notes[notes.length - 1 ].note_id;
+                const number = +lastNoteId.split('-')[1];
+                const newNumber = number + 1;
+                return `NOTE-${newNumber}`;
+            }else{
+                return "NOTE-1";
+            }
+            
+        }catch(err){
+            throw err;
+        }
+    }
 
 }
 
