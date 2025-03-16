@@ -5,7 +5,7 @@ class NoteController{
 
     async saveNoteData(req:Request,resp:Response){
         try{
-            resp.status(201).send(NoteServices.saveNote(req.body));
+            resp.status(201).send(await NoteServices.saveNote(req.body));
         }catch(err){
             resp.status(500).send(err);
         }
