@@ -4,17 +4,33 @@ import NoteServices from "../service/note.service";
 class NoteController{
 
     async saveNoteData(req:Request,resp:Response){
-        resp.status(201).send(NoteServices.saveNote(req.body));
+        try{
+            resp.status(201).send(NoteServices.saveNote(req.body));
+        }catch(err){
+            resp.status(500).send(err);
+        }
     }
     async updateNoteData(req:Request,resp:Response){
-        resp.status(201).send(await NoteServices.updateNote(req.body));
+        try{
+            resp.status(201).send(await NoteServices.updateNote(req.body));
+        }catch(err){
+            resp.status(500).send(err);
+        }
     }
     async deleteNoteData(req:Request,resp:Response){
-        const  id = req.query['id'];
-        resp.status(201).send(await NoteServices.deleteNote(id as String));
+        try{
+            const  id = req.query['id'];
+            resp.status(201).send(await NoteServices.deleteNote(id as String));
+        }catch(err){
+            resp.status(500).send(err);
+        }
     }
     async getAllNoteData(req:Request,resp:Response){
-
+        try{
+            resp.status(201).send(await NoteServices.getAllNotes())
+        }catch(err){
+            resp.status(500).send(err);
+        }
     }
 }
 const NoteControll = new NoteController();
