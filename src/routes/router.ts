@@ -1,5 +1,7 @@
 import {Router} from "express";
 import {Request, Response} from "express";
+import TaskRoute from "./task.router";
+import NoteRoute from "./note.router";
 
 class MainRouter {
     router:Router;
@@ -9,8 +11,9 @@ class MainRouter {
         this.initialRoutes();
     }
     initialRoutes(){
-        console.log("INITIALIZING MAIN ROUTES!!!");
         this.router.use('/healthCheck',this.healthCheck)
+        this.router.use('/task',TaskRoute.router)
+        this.router.use('/note',NoteRoute.router)
     }
     healthCheck(req:Request,resp:Response){
         resp.status(201).send("Server Is Working Correctly!!!");
