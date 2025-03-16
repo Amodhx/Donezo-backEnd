@@ -5,7 +5,7 @@ class NoteService {
 
     async saveNote(noteData : NoteDTO){
         try{
-            return NoteRepository.save(noteData);
+            return await NoteRepository.save(noteData);
         }catch(err){
             throw err;
         }
