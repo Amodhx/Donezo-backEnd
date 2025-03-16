@@ -1,18 +1,45 @@
 import {Request, Response} from "express";
 import NoteServices from "../service/note.service";
+import NoteDTO from "../dto/note.dto";
 
 class NoteController{
 
     async saveNoteData(req:Request,resp:Response){
         try{
-            resp.status(201).send(await NoteServices.saveNote(req.body));
+            if (!req.file) {
+                resp.status(400).json({ message: "No file uploaded" });
+                return
+            }
+            const file = req.file;
+            const base64Img = file?.buffer.toString('base64');
+            const data = req.body;
+            const noteDTO = new NoteDTO(
+                data.note_id,
+                data.note_title,
+                data.note_content,
+                base64Img
+            )
+            resp.status(201).send(await NoteServices.saveNote(noteDTO));
         }catch(err){
             resp.status(500).send(err);
         }
     }
     async updateNoteData(req:Request,resp:Response){
         try{
-            resp.status(201).send(await NoteServices.updateNote(req.body));
+            if (!req.file) {
+                resp.status(400).json({ message: "No file uploaded" });
+                return
+            }
+            const file = req.file;
+            const base64Img = file?.buffer.toString('base64');
+            const data = req.body;
+            const noteDTO = new NoteDTO(
+                data.note_id,
+                data.note_title,
+                data.note_content,
+                base64Img
+            )
+            resp.status(201).send(await NoteServices.updateNote(noteDTO));
         }catch(err){
             resp.status(500).send(err);
         }
