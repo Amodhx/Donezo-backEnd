@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const noteSchema = new mongoose.Schema({
-    note_id:String,
+    note_id: { type: String, required: true, unique: true },
     note_title :String,
     note_content :String,
     image:String
