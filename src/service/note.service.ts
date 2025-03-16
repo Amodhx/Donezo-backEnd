@@ -4,16 +4,34 @@ import NoteDTO from "../dto/note.dto";
 class NoteService {
 
     async saveNote(noteData : NoteDTO){
-        return NoteRepository.save(noteData);
+        try{
+            return NoteRepository.save(noteData);
+        }catch(err){
+            throw err;
+        }
     }
     async updateNote(noteData : NoteDTO){
-        return await NoteRepository.update(noteData);
+        try{
+            return await NoteRepository.update(noteData);
+        }catch(err){
+            throw err;
+        }
+       
     }
     async getAllNotes(){
-
+        try{
+            return await NoteRepository.getAll();
+        }catch(err){
+            throw err;
+        }
     }
     async deleteNote(note_id:String){
-        return await NoteRepository.delete(note_id);
+        try{
+            return await NoteRepository.delete(note_id);
+        }catch(err){
+            throw err;
+        }
+        
     }
 }
 const NoteServices = new NoteService();
