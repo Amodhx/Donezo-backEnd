@@ -2,6 +2,7 @@ import {Router} from "express";
 import {Request, Response} from "express";
 import TaskRoute from "./task.router";
 import NoteRoute from "./note.router";
+import AuthRoute from "./auth.router";
 
 class MainRouter {
     router:Router;
@@ -14,6 +15,7 @@ class MainRouter {
         this.router.use('/healthCheck',this.healthCheck)
         this.router.use('/task',TaskRoute.router)
         this.router.use('/note',NoteRoute.router)
+        this.router.use('/auth',AuthRoute.router)
     }
     healthCheck(req:Request,resp:Response){
         resp.status(201).send("Server Is Working Correctly!!!");
