@@ -12,7 +12,7 @@ class JwtService{
         if (!userData){
             throw new Error("INVALID USER")
         }
-        if (userObj.password != userData.passoword){
+        if (userObj.password != userData.password){
             throw new Error("INVALID PASSWORD")
         }
         return jwt.sign({userId: userObj.user_email}, jwtSecretKey, {

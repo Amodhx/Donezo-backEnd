@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema(
     {
         user_email: { type: String, required: true, unique: true },
-        passoword: String,
+        password: String,
     }
 )
 const UserSchema = mongoose.model('user',userSchema);
