@@ -9,6 +9,8 @@ class JwtService{
         const userData = await UserSchema.findOne({
             user_email : userMail
         })
+        console.log(userData?.password,userObj.password);
+        
         if (!userData){
             throw new Error("INVALID USER")
         }

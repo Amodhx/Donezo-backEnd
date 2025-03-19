@@ -26,20 +26,30 @@ class NoteController{
     }
     async updateNoteData(req:Request,resp:Response){
         try{
-            if (!req.file) {
-                resp.status(400).json({ message: "No file uploaded" });
-                return
-            }
+            // if (!req.file) {
+            //     resp.status(400).json({ message: "No file uploaded" });
+            //     return
+            // }
             const file = req.file;
-            const base64Img = file?.buffer.toString('base64');
             const data = req.body;
-            const noteDTO = new NoteDTO(
-                data.note_id,
-                data.note_title,
-                data.note_content,
-                base64Img
-            )
-            resp.status(201).send(await NoteServices.updateNote(noteDTO));
+            if(file){
+                const base64Img = file?.buffer.toString('base64');
+                const noteDTO = new NoteDTO(
+                    data.note_id,
+                    data.note_title,
+                    data.note_content,
+                    base64Img
+                )
+                resp.status(201).send(await NoteServices.updateNote(noteDTO));
+            }else{
+                const noteDTO = new NoteDTO(
+                    data.note_id,
+                    data.note_title,
+                    data.note_content,
+                    data.image
+                )
+                resp.status(201).send(await NoteServices.updateNote(noteDTO));
+            }
         }catch(err){
             resp.status(500).send(err);
         }
