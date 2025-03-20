@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "taskmanager-qhoa",
+  "private_key_id": "2d0e8b9083a8936b499768f7f86cd00271c86f84",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDeBTKWAvCZ7pge\nWmTYXJuGTiKDpoeed2qniCHgZXC9iX06n1eVTrI17vUH8ax1n5yeU5si2utkuZvF\nMWO+XtJpDAFKnk4kSy/zO9ioQlvVfMVtUQzGq8b0HnAZ3n1C/OQ8hYTm1ulohY4L\nzNSLEQSVVjMKMK527ZJvD25zby6Iq7BBNjstJTfs5kdDDWR89LI+1X/vQbxlr3eX\n39OXPJasE7W3cel3FqeWHbPsmQIHezICH4R+eXqNkccSbRYkWuGZSPmhcHcxCdaL\ncxZEKYYVA4KnWLxYuaFiVPxh6N5MCDITLTaxLS4ui/3Er1sX05EP4iIl34AvVBLV\n06tO7599AgMBAAECggEAFBBPLnxMhvSnXZLYqy7PRTdZaiFJ/zmWc1ZbjV5Nbmt2\n3C3bKdyHQVV7YkDmT2jhq/MtQVycSil12L+qXmFOTXzuvvIIaMI8rpP5c9cvWl8g\nrkzVRTzvyU7Y3ZWcJ0oYTBna1UuVo0Lyf8F+caTTj7VO/nxAv/GfOpcf6aGiCGqk\nb5LmzuLkHm/VEwpsJ2ttoVA4FCq8d+ugdngc4RddBLQofCNZI0oEzU5bH79WCRBf\nxMXkz7jqBZE9VK1sGAfVdgb0F0MI+KhmhJqqHOUrLiLGtWIldJPZH2+c2S4R4dIK\nKQBj3d6DpcsaERzB/NKVz8dHuO1zxbtxHo6OcWgjhwKBgQD3pmvDRbCi7it5zSRe\nftsRyB72k30ZNmVgdFLTGaTZFSXGUUVR0DOmDLt2Sw9wss6kl9KVVvYBXqGw1Fgv\n3HaTdc7Zhv98FEwOWG853/qqN3Uuo3piqQUxeK1aKAg/W0vCEeyJWOilJKHPeU/9\nWSoCZiAg9/Gwct3W+NJD0vE6JwKBgQDlgY31X7Ledp3Gya4vj2tBSyCM7fEAhbay\nvqOHV/+E4B+SJmcme6IkmYV+ZjDxug/piv5C1Tmc6Nvcq5/bLI4dbhZKzN5fjw4s\nQ9Jb4YBxWI33rfydY3xuNvPZQq1f/OhEvCI7FwZVdUDU1L/GdC66SHRUSsYqXvqC\nO8/Yx1TTuwKBgQCXDZVRaCKTXr557pyuXqX0tKHeOJvnUvyG1qzmQhAAsRt3WX70\npg+6yq1VO/dRAF92mXxCxuYKc9Qf7YVUvB4/V24x1FvlLOQvI9XD8VANnwIEzoYJ\nw5p9UGQ8R4qwSlltKE2kgOx2Pl/MEuytVUOAbxZNxa5Pt+CEDQUDhZjJpQKBgQDf\nGd3B1dGvaGdfwtZM7YI56qot1XAeLd24TJHzE5wUszp9fE9xnWW1Znfas8SId3LY\neIFKvrRO0B5KmZvAF8Pe4BFTjWvuQMZqSVPIdaHCjW8UglG7PebLzSem36ZiVRwF\nFU3BW1SQ5narblUuuepis+RBvJ5+ue2ThEk8Vikj2QKBgGxBiy9ZdWxs4v5eaNe5\nfcxDtmexPUJdgruVYnBNNV3HL6CHp5J/FHjtAaY8D3Dbra8p1spl5jlVQpOAOr7r\nz62BDUcm5+ASrhB4vykeDk+4mCv0tLEI4Vg7r/puVIrx5hd0RYGBXt53+wgW7fCt\nz+ehJElLsCsDE8dw0crKgdk0\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-access@taskmanager-qhoa.iam.gserviceaccount.com",
+  "client_id": "103329482924902463094",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-access%40taskmanager-qhoa.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
