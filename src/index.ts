@@ -12,7 +12,7 @@ import TaskDTO from './dto/task.dto';
 import TaskRepository from './dao/task.dao';
 import TaskServices from './service/task.service';
 
-// Generate a new session ID for each request
+
 const sessionId = uuidv4(); 
 
 
@@ -33,9 +33,6 @@ const sessionClient = new dialogflow.SessionsClient({
 })
 
 async function detectIntentAi(req:Request,resp:Response){
-    console.log(req.body);
-    
-    
     resp.status(201).send(await detectIntent(req.body.text,sessionId));
 }
 
